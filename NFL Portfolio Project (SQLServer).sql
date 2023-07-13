@@ -119,7 +119,7 @@ Order by home_total_yards DESC;
 Select home, SUM(total_yards_home) as home_total_yards
 From PortfolioProject..NFLStatRecordsHome
 GROUP by home
-Having home = 'Panthers' OR home = 'Vikings' OR home = 'Lions' OR home = 'Bears'
+Having home = 'Packers' OR home = 'Vikings' OR home = 'Lions' OR home = 'Bears'
 Order by home_total_yards DESC;
 
 -- NFC East Teams that held the Highest Total Yards in Home (Greatest to Least)
