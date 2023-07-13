@@ -31,7 +31,7 @@ order by sum_total_yards DESC;
 Select away, SUM(total_yards_away) as sum_total_yards
 From PortfolioProject..NFLStatRecordsAway
 GROUP by away
-Having away = 'Bears' OR away = 'Bengals' OR away = 'Ravens' OR away = 'Steelers'
+Having away = 'Browns' OR away = 'Bengals' OR away = 'Ravens' OR away = 'Steelers'
 Order by sum_total_yards DESC;
 
 -- AFC East Teams that held the Highest Total Yards in Away (Greatest to Least)
@@ -87,7 +87,7 @@ Order by home_total_yards DESC;
 Select home, SUM(total_yards_home) as home_total_yards
 From PortfolioProject..NFLStatRecordsHome
 GROUP by home
-Having home = 'Bears' OR home = 'Bengals' OR home = 'Ravens' OR home = 'Steelers'
+Having home = 'Browns' OR home = 'Bengals' OR home = 'Ravens' OR home = 'Steelers'
 Order by home_total_yards DESC;
 
 -- AFC East Teams that held the Highest Total Yards in Home (Greatest to Least)
