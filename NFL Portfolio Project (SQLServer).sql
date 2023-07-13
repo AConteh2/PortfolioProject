@@ -169,7 +169,7 @@ From PortfolioProject..NFLStatRecordsAway a1
 JOIN PortfolioProject..NFLStatRecordsHome h1
 ON a1.away = h1.home
 GROUP By a1.away, h1.home
-Order by total_fumbles DESC;
+Order by total_fumbles_rate DESC;
 
 
 -- Looking for NFL Teams with the Best Performance in Interceptions
@@ -197,7 +197,7 @@ FROM PortfolioProject..NFLStatRecordsAway a1
 JOIN PortfolioProject..NFLStatRecordsHome h1
 ON a1.away = h1.home
 GROUP BY a1.away
-Order BY drive_rate_score;
+Order BY drive_rate_score DESC;
 
 -- Summary of NFL Team Performance Based on Team Scoring
 
@@ -217,7 +217,7 @@ FROM PortfolioProject..NFLStatRecordsAway a1
 JOIN PortfolioProject..NFLStatRecordsHome h1
 ON a1.away = h1.home
 GROUP BY a1.away
---Order BY drive_rate_score;
+--Order BY drive_rate_score DESC;
 
 Create View NFLTeamRushPassPerformanceRate as
 Select a1.away as team, AVG(a1.rushing_yards_away / a1.total_yards_away) as away_Yards_Per_Rushing_Percentage, 
